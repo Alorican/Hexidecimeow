@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://e0qonhvo6xvw"]
+
+[ext_resource type="Script" path="res://Options.gd" id="1_8knf4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8knf4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Windows" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 789.0
+offset_top = 136.0
+offset_right = -685.0
+offset_bottom = -716.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "WINDOWS"
+
+[node name="Volume" type="Button" parent="."]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 439.0
+offset_right = 1240.0
+offset_bottom = 664.0
+text = "VOLUME"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 736.0
+offset_right = 1241.0
+offset_bottom = 976.0
+text = "BACK"
+
+[connection signal="pressed" from="Windows" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Volume" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_button_3_pressed"]
