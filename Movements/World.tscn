@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxhdp03k4qvsj"]
+
+[ext_resource type="PackedScene" uid="uid://c57ojwke212j1" path="res://Byrne Assets/Byrne.tscn" id="1_6kvq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egubx"]
+size = Vector2(1966, 210.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6d8wp"]
+size = Vector2(243, 916.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmbup"]
+size = Vector2(243, 916.5)
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(953, 1094)
+shape = SubResource("RectangleShape2D_egubx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-119, 526)
+shape = SubResource("RectangleShape2D_6d8wp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1950, 533)
+shape = SubResource("RectangleShape2D_nmbup")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -30.0
+offset_top = 986.0
+offset_right = 1941.0
+offset_bottom = 1213.0
+
+[node name="Byrne" parent="." instance=ExtResource("1_6kvq0")]
+position = Vector2(35, -92)
+is_right = false
