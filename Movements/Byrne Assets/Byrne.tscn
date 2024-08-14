@@ -364,7 +364,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Byrne Sword",
-"speed": 24.0
+"speed": 23.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -441,7 +441,6 @@ scale = Vector2(0.190993, 0.200688)
 sprite_frames = SubResource("SpriteFrames_ifsmh")
 animation = &"Byrne Sword"
 autoplay = "Byrne Idle"
-frame_progress = 0.729689
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
